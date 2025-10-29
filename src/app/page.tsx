@@ -1,15 +1,18 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Overview from "./components/Overview";
+import Hero from "./components/home/Hero";
+import Overview from "./components/home/Overview";
+import Services from "./components/home/Services";
+import Testimonial from "./components/home/Testimonial";
 
 
 export default function Home() {
   return (
     <main>
-      <Navbar></Navbar>
       <Hero></Hero>
       <Overview></Overview>
+      <Services></Services>
+      <Testimonial></Testimonial>
     </main>
   );
 }
