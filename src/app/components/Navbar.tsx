@@ -12,9 +12,9 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 font-semibold text-lg">
-          <li><a href="#" className="hover:text-indigo-400 transition">Home</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition">Services</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition">About</a></li>
+          <li><a href="/" className="hover:text-indigo-400 transition">Home</a></li>
+          <li><a href="/about" className="hover:text-indigo-400 transition">About</a></li>
+          <li><a href="/services" className="hover:text-indigo-400 transition">Services</a></li>
           <li><a href="#" className="hover:text-indigo-400 transition">Teams</a></li>
           <li><a href="#" className="hover:text-indigo-400 transition">Blog</a></li>
         </ul>
@@ -55,11 +55,11 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col items-center gap-5 font-semibold text-lg">
-          <li><a href="#" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Home</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>About</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Teams</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Services</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Blog</a></li>
+          <li><a href="/" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Home</a></li>
+          <li><a href="/about" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>About</a></li>
+          <li><a href="/teams" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Teams</a></li>
+          <li><a href="/services" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Services</a></li>
+          <li><a href="/blog" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Blog</a></li>
           <li>
             <button className="bg-purple-700 hover:bg-purple-900 px-5 py-2 rounded-full font-bold text-md transition">
               SIGN IN
