@@ -15,7 +15,7 @@ export default function Navbar() {
           <li><a href="/" className="hover:text-indigo-400 transition">Home</a></li>
           <li><a href="/about" className="hover:text-indigo-400 transition">About</a></li>
           <li><a href="/services" className="hover:text-indigo-400 transition">Services</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition">Teams</a></li>
+          <li><a href="/teams" className="hover:text-indigo-400 transition">Teams</a></li>
           <li><a href="#" className="hover:text-indigo-400 transition">Blog</a></li>
         </ul>
 
