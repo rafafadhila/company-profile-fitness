@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 export default function Header({image, title, subtitle}: HeaderProps) {
     return (
-        <section className="relative h-[45vh]">
+        <section className="relative h-[40vh]">
 
             <Image
                 src={image}
