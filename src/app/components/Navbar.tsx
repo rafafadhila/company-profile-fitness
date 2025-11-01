@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -12,17 +13,19 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 font-semibold text-lg">
-          <li><a href="/" className="hover:text-indigo-400 transition">Home</a></li>
-          <li><a href="/about" className="hover:text-indigo-400 transition">About</a></li>
-          <li><a href="/services" className="hover:text-indigo-400 transition">Services</a></li>
-          <li><a href="/teams" className="hover:text-indigo-400 transition">Teams</a></li>
-          <li><a href="#" className="hover:text-indigo-400 transition">Blog</a></li>
+          <li><Link href="/" className="hover:text-indigo-400 transition">Home</Link></li>
+          <li><Link href="/about" className="hover:text-indigo-400 transition">About</Link></li>
+          <li><Link href="/services" className="hover:text-indigo-400 transition">Services</Link></li>
+          <li><Link href="/teams" className="hover:text-indigo-400 transition">Teams</Link></li>
+          <li><Link href="#" className="hover:text-indigo-400 transition">Blog</Link></li>
         </ul>
 
         {/* Sign In Button (Desktop Only) */}
-        <button className="hidden md:block bg-purple-700 hover:bg-purple-900 px-5 py-2 rounded-full font-bold text-md transition">
-          SIGN IN
-        </button>
+        <Link 
+        href={'/auth/login'}
+        className="hidden md:block bg-purple-700 hover:bg-purple-900 px-5 py-2 rounded-full font-bold text-md transition">
+          LOGIN
+        </Link>
 
         {/* Hamburger Menu Button (Mobile) */}
         <button
