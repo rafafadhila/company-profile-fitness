@@ -47,7 +47,7 @@ export default function ServicesCard() {
                         { services.map((item, index) => (
                                 <div
                                 key={index}
-                                className="group bg-gray-50 rounded-md shadow-sm p-8 text-left hover:scale-101 hover:shadow-2xl hover:bg-white transition-all duration-300 space-y-4">
+                                className="group bg-gray-50 rounded-md shadow-sm p-8 text-left hover:scale-101 hover:shadow-2xl hover:bg-white transition-all duration-300 space-y-4 flex flex-col">
                                     <div className="w-full overflow-hidden rounded-md">
                                         <Image 
                                         src={item.image}
@@ -58,10 +58,10 @@ export default function ServicesCard() {
                                         />
                                     </div>
                                     <span className="block text-3xl font-semibold text-indigo-600">{item.title}</span>
-                                    <h3 className="text-base font-semibold text-gray-700 mb-6">
+                                    <h3 className="text-base font-semibold text-gray-700 mb-6 grow">
                                         {item.description}
                                     </h3>
-                                    <a href="#" className="bg-indigo-600 px-4 py-3 text-white rounded-md font-bold shadow-md hover:bg-indigo-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-150">Learn More</a>
+                                    <a href="#" className="bg-indigo-600 px-4 py-3 text-white rounded-md font-bold shadow-md hover:bg-indigo-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-150 block text-center">Learn More</a>
                                 </div>
                             ))}
                     </div>
