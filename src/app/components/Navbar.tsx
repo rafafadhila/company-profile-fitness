@@ -17,7 +17,7 @@ export default function Navbar() {
           <li><Link href="/about" className="hover:text-indigo-400 transition">About</Link></li>
           <li><Link href="/services" className="hover:text-indigo-400 transition">Services</Link></li>
           <li><Link href="/teams" className="hover:text-indigo-400 transition">Teams</Link></li>
-          <li><Link href="#" className="hover:text-indigo-400 transition">Blog</Link></li>
+          <li><Link href="/blog" className="hover:text-indigo-400 transition">Blog</Link></li>
         </ul>
 
         {/* Sign In Button (Desktop Only) */}
