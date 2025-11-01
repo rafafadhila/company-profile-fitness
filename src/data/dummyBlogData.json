@@ -1,0 +1,23 @@
+[
+  {
+    "title": "How to Stay Consistent in Coding",
+    "content": "Consistency is the key to mastering programming. In this post, we explore simple habits you can build to code every day...",
+    "author": "Rafa Fadhila",
+    "date": "October 29, 2025",
+    "image": "/images/services/class-session.jpg"
+  },
+  {
+    "title": "Top 5 VSCode Extensions for Productivity",
+    "content": "Discover extensions that can boost your workflow, from GitLens to Prettier. Here’s what makes each one worth your time...",
+    "author": "John Doe",
+    "date": "October 25, 2025",
+    "image": "/images/services/personal-trainer.jpg"
+  },
+  {
+    "title": "Why Tailwind CSS Makes UI Design Fun Again",
+    "content": "Tailwind CSS simplifies styling by giving you utility classes that let you build fast without leaving your HTML...",
+    "author": "Sarah Kim",
+    "date": "October 22, 2025",
+    "image": "/images/services/class-session.jpg"
+  }
+]
