@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} antialiased`}
       >
+
         <Navbar></Navbar>
+        <ToastContainer></ToastContainer>
         {children}
         <Footer></Footer>
         
