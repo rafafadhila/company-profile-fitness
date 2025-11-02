@@ -44,11 +44,7 @@ export default function BlogList() {
                             </h2>
                             <p className="text-gray-600 mb-3 grow">{blog.content}</p>
                             <div className="text-sm text-gray-500">
-                                By <span className="font-medium">{blog.author}</span> • {new Date(blog.created).toLocaleDateString("en-En", {
-                                    day: "numeric",
-                                    month: "long",
-                                    year: "numeric",
-                                })}
+                                By <span className="font-medium">{blog.author}</span> • {blog.date}
                             </div>
                         </Link>
                     ))
