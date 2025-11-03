@@ -1,0 +1,44 @@
+[
+  {
+    "image": "/images/profile-pic.jpg",
+    "name": "Juan Adam",
+    "role": "CEO",
+    "bio": "Juan is the driving force behind the company’s vision, leading strategic decisions and inspiring innovation across all departments."
+  },
+  {
+    "image": "/images/profile-pic.jpg",
+    "name": "Dwayne Jhonny",
+    "role": "Founder",
+    "bio": "Dwayne built the foundation of the company from the ground up, combining creativity and business acumen to shape its identity and growth."
+  },
+  {
+    "image": "/images/profile-pic.jpg",
+    "name": "Reed Richy",
+    "role": "Co-Founder",
+    "bio": "Reed oversees product development and ensures that every solution aligns with the company’s mission of delivering quality and value."
+  },
+  {
+    "image": "/images/profile-pic.jpg",
+    "name": "Slimy Hyun",
+    "role": "Nutritionist Expert",
+    "bio": "Slimy specializes in health optimization through nutrition, helping clients achieve balance and peak performance through personalized guidance."
+  },
+  {
+    "image": "/images/profile-pic.jpg",
+    "name": "Alicia Verne",
+    "role": "Head of Marketing",
+    "bio": "Alicia leads the marketing team with a focus on storytelling, brand consistency, and data-driven growth strategies across all channels."
+  },
+  {
+    "image": "/images/profile-pic.jpg",
+    "name": "Marcus Lee",
+    "role": "Lead Developer",
+    "bio": "Marcus is passionate about crafting scalable digital experiences, overseeing front-end and back-end development with precision and creativity."
+  },
+  {
+    "image": "/images/profile-pic.jpg",
+    "name": "Sophie Tan",
+    "role": "UX/UI Designer",
+    "bio": "Sophie creates intuitive and visually engaging designs, turning complex concepts into seamless user experiences that delight and inspire."
+  }
+]

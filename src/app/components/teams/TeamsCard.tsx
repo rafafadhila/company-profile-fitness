@@ -1,32 +1,9 @@
 import Image from "next/image"
 
+import dummyTeamData from "@/data/dummyTeamData.json"
+
 export default function TeamsCard() {
-     const teams = [
-            {
-                image: "/images/profile-pic.jpg",
-                name: 'Juan Adam',
-                role: 'CEO',
-                bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non impedit sed, eum consequatur nobis, atque quo amet natus ipsam asperiores praesentium necessitatibus distinctio omnis voluptatum rem deserunt labore totam ad. '
-            },
-            {
-                image: "/images/profile-pic.jpg",
-                name: 'Dwayne Jhonny',
-                role: 'Founder',
-                bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non impedit sed, eum consequatur nobis, atque quo amet natus ipsam asperiores praesentium necessitatibus distinctio omnis voluptatum rem deserunt labore totam ad. '
-            },
-            {
-                image: "/images/profile-pic.jpg",
-                name: 'Reed Richy',
-                role: 'Co-Founder',
-                bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non impedit sed, eum consequatur nobis, atque quo amet natus ipsam asperiores praesentium necessitatibus distinctio omnis voluptatum rem deserunt labore totam ad. '
-            },
-            {
-                image: "/images/profile-pic.jpg",
-                name: 'Slimy Hyun',
-                role: 'Co-Founder',
-                bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non impedit sed, eum consequatur nobis, atque quo amet natus ipsam asperiores praesentium necessitatibus distinctio omnis voluptatum rem deserunt labore totam ad. '
-            },
-        ];
+     const teams = dummyTeamData;
     
         return (
         <section id="overview" className="bg-white text-black py-24">

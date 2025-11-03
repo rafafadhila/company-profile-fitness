@@ -2,21 +2,10 @@ import React from 'react'
 
 import Image from 'next/image';
 
+import dummyTeamData from "@/data/dummyTeamData.json"
+
 export default function Team() {
-    const teams = [
-        {
-            image: "/images/profile-pic.jpg",
-            name: 'Juan Adam',
-            role: 'CEO',
-            bio : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non impedit sed, eum consequatur nobis, atque quo amet natus ipsam asperiores praesentium necessitatibus distinctio omnis voluptatum rem deserunt labore totam ad. '
-        },
-        {
-            image: "/images/profile-pic.jpg",
-            name: 'Dwayne Jhonny',
-            role: 'Founder',
-            bio : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non impedit sed, eum consequatur nobis, atque quo amet natus ipsam asperiores praesentium necessitatibus distinctio omnis voluptatum rem deserunt labore totam ad. '
-        },
-    ];
+    const teams = dummyTeamData;
 
     return (
         <section id="overview" className="bg-white text-black py-24">
@@ -37,7 +26,7 @@ export default function Team() {
                     {/* Right Side - Cards */}
                     <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
 
-                        {teams.map((item, index) => (
+                        {teams.slice(0, 2).map((item, index) => (
                             <div
                                 key={index}
                                 className="bg-gray-50 rounded-2xl shadow-sm p-8 text-center hover:scale-105 hover:shadow-2xl hover:bg-white transition-all duration-300 space-y-2"
