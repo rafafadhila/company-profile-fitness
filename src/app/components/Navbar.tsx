@@ -36,7 +36,7 @@ export default function Navbar() {
           ) : (
             <>
               <span className="bg-purple-600 p-2 m-2 rounded-md font-bold text-sm transition">
-                {user?.email}
+                {user?.name}
               </span>
               <button
                 onClick={logout}
