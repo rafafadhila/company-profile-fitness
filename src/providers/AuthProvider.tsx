@@ -31,12 +31,7 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
                 if (pathname.startsWith("/auth")) {
                     router.push("/");
                 }
-            } else {
-                const isProtected = !pathname.startsWith("/auth") && pathname !== "/";
-                if (isProtected) {
-                    router.push("/auth/login");
-                }
-            }
+            } 
         };
         handleAuth();
     }, [user?.objectId, pathname]);
