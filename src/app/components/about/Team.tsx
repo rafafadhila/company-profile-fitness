@@ -1,11 +1,12 @@
 import React from 'react'
 
-import Image from 'next/image';
+import TeamsCard from "@/app/components/teams/TeamsCard"
+import { getTeamData } from "@/lib/getTeamData"
 
-import dummyTeamData from "@/data/dummyTeamData.json"
+export default async function Team() {
 
-export default function Team() {
-    const teams = dummyTeamData;
+    const teams = await getTeamData();
+
 
     return (
         <section id="overview" className="bg-white text-black py-24">
@@ -25,34 +26,7 @@ export default function Team() {
 
                     {/* Right Side - Cards */}
                     <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-
-                        {teams.slice(0, 2).map((item, index) => (
-                            <div
-                                key={index}
-                                className="bg-gray-50 rounded-2xl shadow-sm p-8 text-center hover:scale-105 hover:shadow-2xl hover:bg-white transition-all duration-300 space-y-2"
-                            >
-                                <div className='w-full'>
-                                <Image 
-                                    src={item.image}
-                                    width={300}
-                                    height={300}
-                                    alt={`profile pic ${item.name}`}
-                                    className='w-full h-56 object-cover rounded-md'
-                                />
-
-                                </div>
-                                <h3 className="text-xl font-extrabold text-indigo-600">
-                                    {item.name}
-                                </h3>
-                                <h3 className="text-base font-semibold text-gray-700">
-                                    {item.role}
-                                </h3>
-                                <h3 className="text-base font-semibold text-gray-700">
-                                    {item.bio}
-                                </h3>
-                            </div>
-                        ))}
-
+                        <TeamsCard teams={teams.slice(0, 2)}></TeamsCard>
                     </div>
 
                 </div>
