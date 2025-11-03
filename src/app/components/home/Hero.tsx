@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 export default function Hero() {
 
-    const VideoHero = dynamic(() => import("./VideoHero"), { ssr: false });
+    const VideoHero = dynamic(() => import("./VideoHero"), { ssr: true });
 
     return (
         <section className="relative h-screen bg-purple-950">
