@@ -1,11 +1,14 @@
+'use client'
 import Image from "next/image";
 
 import dummyBlogData from '@/data/dummyBlogData.json'
 import Link from "next/link";
+import useAuthStore from "@/stores/useAuthStore";
 
 export default function BlogList() {
 
     const blogs = dummyBlogData;
+    const { user } = useAuthStore();
 
     return (
         < section className="max-w-6xl mx-auto p-6 space-y-6" >
@@ -18,7 +21,15 @@ export default function BlogList() {
                         placeholder="Search articles..."
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
                     />
-                    <button className="bg-indigo-600 rounded-md text-white font-bold text-nowrap px-4">Create Blog</button>
+                    {
+                        user.objectId ? (
+
+                            <button className="bg-indigo-600 rounded-md text-white font-bold text-nowrap px-4">Create Blog</button>
+                        )
+                            :
+                            (
+                                <></>
+                        )}
                 </div>
             </div>
 
