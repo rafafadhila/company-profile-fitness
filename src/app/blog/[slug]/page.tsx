@@ -36,7 +36,7 @@ export default async function Page({ params }: Params) {
 
                     {/* Meta info */}
                     <div className="text-center text-sm text-gray-500">
-                        By <span className="font-medium text-indigo-700">{blogData.author}</span> • {new Date(blogData.created).toLocaleDateString("en-US", {
+                        By <span className="font-medium text-indigo-700">{blogData.author}</span> • {new Date(blogData.valueDate).toLocaleDateString("en-US", {
                             day: "2-digit",
                             month: "long",
                             year: "numeric",
