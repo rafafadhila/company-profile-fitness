@@ -6,14 +6,15 @@ import Backendless from "@/utils/backendless";
 export async function POST(req: NextRequest) {
 
     try {
-        const { title, content, image, author, slug } = await req.json();
-        console.log({ title, content, image, author, slug });
+        const { title, content, image, author, slug, valueDate } = await req.json();
+        console.log({ title, content, image, author, slug, valueDate });
         const response = await Backendless.Data.of("Blogs").save({
             title,
             content,
             image,
             author,
-            slug
+            slug,
+            valueDate,
         });
 
         return NextResponse.json(
