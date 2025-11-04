@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} antialiased`}
+        className={`${dmSans.variable} antialiased flex flex-col min-h-screen`}
       >
         <AuthProvider>
           <Navbar></Navbar>
