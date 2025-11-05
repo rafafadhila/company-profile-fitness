@@ -14,7 +14,7 @@ export default async function Team() {
                 <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-16 items-center">
 
                     {/* Left Side */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 text-center lg:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                             Our Founder
                         </h2>

@@ -25,11 +25,11 @@ export default function Overview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Side */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
               What Makes Us Different
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className=" text-lg text-gray-600 leading-relaxed">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus, dicta error quam nisi ea! Ducimus, obcaecati ad soluta nobis explicabo nostrum similique est. Suscipit repudiandae sit eius nihil corrupti!
             </p>
             <a href="#" className="bg-indigo-600 px-4 py-3 text-white rounded-md font-bold shadow-md hover:bg-indigo-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-150">More About Us</a>
