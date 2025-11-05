@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import useAuthStore from "@/stores/useAuthStore";
+import Image from "next/image";
 
 export default function Navbar() {
 
@@ -10,9 +11,17 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-indigo-950 text-white shadow-md z-50">
-      <nav className="mx-auto flex justify-between items-center px-6 py-4 md:px-12">
+      <nav className="mx-auto flex justify-between items-center px-4 py-4 md:px-12">
         {/* Logo */}
-        <h1 className="text-xl font-bold tracking-wide">FITNESS LOGO</h1>
+        <div className="relative w-20 h-12">
+          <Image
+            src={'/images/fitness-logo3.png'}
+            fill
+            alt="fitness company logo"
+            className="object-contain"
+          />
+
+        </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 font-semibold text-lg">
@@ -77,15 +86,16 @@ export default function Navbar() {
           }`}
       >
         <ul className="flex flex-col items-center gap-5 font-semibold text-lg">
-          <li><a href="/" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Home</a></li>
-          <li><a href="/about" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>About</a></li>
-          <li><a href="/teams" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Teams</a></li>
-          <li><a href="/services" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Services</a></li>
-          <li><a href="/blog" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Blog</a></li>
+          <li><Link href="/" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link href="/about" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link href="/teams" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Teams</Link></li>
+          <li><Link href="/services" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Services</Link></li>
+          <li><Link href="/blog" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Blog</Link></li>
           <li>
             {!user?.objectId ? (
               <>
                 <Link
+                  onClick={() => setIsOpen(false)}
                   href="/auth/login"
                   className="bg-purple-700 hover:bg-purple-900 px-5 py-2 rounded-full font-bold text-md transition">
                   Login

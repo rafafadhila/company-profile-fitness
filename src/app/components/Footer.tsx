@@ -1,6 +1,7 @@
 "use client";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -9,7 +10,15 @@ export default function Footer() {
 
                 {/* Left - Logo */}
                 <div className="text-center md:text-left">
-                    <h2 className="text-xl font-bold tracking-wide">FITNESS LOGO</h2>
+                    <div className="relative w-25 h-15 mx-auto">
+                        <Image
+                            src={'/images/fitness-logo3.png'}
+                            fill
+                            alt="fitness company logo"
+                            className="object-contain"
+                        />
+
+                    </div>
                     <p className="text-sm text-indigo-300 mt-2">
                         Train hard, stay consistent, and achieve greatness.
                     </p>
