@@ -2,6 +2,33 @@ import Header from "../components/Header"
 import TeamsCard from "../components/teams/TeamsCard"
 import { getTeamData } from "@/lib/getTeamData"
 
+export const metadata = {
+    title: "Our Team | Future Fitness",
+    description:
+        "Meet the passionate trainers and fitness professionals behind Future Fitness who guide your journey to success.",
+    openGraph: {
+        title: "Our Team | Future Fitness",
+        description:
+            "Get to know the expert trainers and dedicated staff of Future Fitness.",
+        images: [
+            {
+                url: "/images/fitness-logo3.png",
+                width: 1200,
+                height: 630,
+                alt: "Future Fitness Gym Facility",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Meet the Future Fitness Team",
+        description:
+            "Meet our experienced coaches and team members helping you achieve your fitness goals.",
+        images: ["/images/fitness-logo3.png"],
+    },
+};
+
+
 export default async function page() {
 
     const teams = await getTeamData();
