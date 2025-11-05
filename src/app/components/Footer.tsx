@@ -16,6 +16,7 @@ export default function Footer() {
                             fill
                             alt="fitness company logo"
                             className="object-contain"
+                            sizes="(max-width: 768px) 60px, 80px"
                         />
 
                     </div>

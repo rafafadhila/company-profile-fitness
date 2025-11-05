@@ -100,7 +100,8 @@ export default function BlogList({ blogs }: BlogListProps) {
                                     src={blog.image}
                                     alt="thumbnail"
                                     fill
-                                    className="rounded-md mb-2 object-cover"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    className="object-cover"
                                 />
                             </div>
 
