@@ -33,7 +33,8 @@ export default function useCreateBlogForm() {
                 })
 
                 toast.success(response?.data?.message || 'Create Blog Succesfully!')
-                router.push('/auth/login')
+                // router.push(`/blog/${response?.data?.data?.slug}`)
+                router.push(`/blog`)
             } catch (error: any) {
                 toast.error(error?.response?.data?.message || 'Failed to Create Blog')
             }
