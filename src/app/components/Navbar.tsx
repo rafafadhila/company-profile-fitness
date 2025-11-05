@@ -13,7 +13,9 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full bg-indigo-950 text-white shadow-md z-50">
       <nav className="mx-auto flex justify-between items-center px-4 py-4 md:px-12">
         {/* Logo */}
-        <div className="relative w-20 h-12">
+        <Link 
+        href={'/'}
+        className="relative w-20 h-12">
           <Image
             src={'/images/fitness-logo3.png'}
             fill
@@ -21,7 +23,7 @@ export default function Navbar() {
             className="object-contain"
           />
 
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 font-semibold text-lg">
