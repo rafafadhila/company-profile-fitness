@@ -13,12 +13,10 @@ const getBlogDetail = async (slug: string) => {
 };
 
 interface Params {
-    params: {
-        slug: string;
-    };
+    slug: string;
 }
 
-export async function generateMetadata({ params }: Params) {
+export async function generateMetadata({ params }: { params: Promise<Params> }) {
     const { slug } = await params;
     const blogData = await getBlogDetail(slug);
 
@@ -49,7 +47,7 @@ export async function generateMetadata({ params }: Params) {
             title: `${blogData.title} | Future Fitness`,
             description,
             type: "article",
-            // url: `https://yourdomain.com/blog/${params.slug}`,
+            // url: `https://yourdomain.com/blog/${slug}`,
             siteName: "Future Fitness",
             publishedTime: blogData.valueDate,
             authors: [blogData.author],
@@ -72,7 +70,7 @@ export async function generateMetadata({ params }: Params) {
 }
 
 
-export default async function Page({ params }: Params) {
+export default async function Page({ params }: { params: Promise<Params> }) {
 
     const { slug } = await params;
     const blogData = await getBlogDetail(slug);
@@ -80,7 +78,6 @@ export default async function Page({ params }: Params) {
     return (
         <main className="bg-white pt-36 pb-16">
             <div className="max-w-3xl mx-auto px-6">
-                {/* {blogData.map((item, index) => ( */}
                 <article key={blogData?.objectId} className="flex flex-col gap-6 text-gray-800">
 
                     {/* Title */}
@@ -114,7 +111,6 @@ export default async function Page({ params }: Params) {
                         {blogData?.content}
                     </div>
                 </article>
-                {/* ))} */}
             </div>
         </main>
     );
