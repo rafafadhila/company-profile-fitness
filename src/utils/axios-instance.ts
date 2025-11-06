@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-    baseURL: "https://company-profile-fitness.vercel.app/api"
+    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL
 })
 
 // Perlu diganti URL nya pas deploy
