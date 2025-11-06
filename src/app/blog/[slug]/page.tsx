@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const getBlogDetail = async (slug: string) => {
     try {
-        const response = await fetch(`${process.env.API_BASE_URL}/blogs/${slug}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${slug}`, {
             next: { revalidate: 60 },
         });
         const product = await response?.json();
