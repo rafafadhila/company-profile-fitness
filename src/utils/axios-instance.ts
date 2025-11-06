@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-    baseURL: "http://localhost:3000/api"
+    baseURL: "https://company-profile-fitness.vercel.app//api"
 })
 
 // Perlu diganti URL nya pas deploy
