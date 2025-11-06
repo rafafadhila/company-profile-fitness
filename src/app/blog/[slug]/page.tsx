@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Params) {
             title: `${blogData.title} | Future Fitness`,
             description,
             type: "article",
-            url: `https://yourdomain.com/blog/${params.slug}`,
+            // url: `https://yourdomain.com/blog/${params.slug}`,
             siteName: "Future Fitness",
             publishedTime: blogData.valueDate,
             authors: [blogData.author],
