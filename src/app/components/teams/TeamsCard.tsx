@@ -16,6 +16,7 @@ export default function TeamsCard({ teams }: { teams: any[] }) {
                                 height={300}
                                 alt={`Profile pic ${item.name}`}
                                 className="w-full h-56 object-cover rounded-md"
+                                unoptimized
                             />
                         </div>
                         <h3 className="text-xl font-extrabold text-indigo-600">{item.name}</h3>
