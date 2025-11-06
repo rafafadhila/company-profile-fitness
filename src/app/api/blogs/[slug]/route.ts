@@ -2,12 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import Backendless from "@/utils/backendless";
 
 interface Params {
-    params: {
-        slug: string
-    }
+    slug: string
 }
 
-export async function GET(req: NextRequest, { params }: Params) {
+export async function GET(
+    req: NextRequest,
+    { params }: { params: Promise<Params> }
+) {
     try {
         const { slug } = await params;
 
@@ -32,7 +33,7 @@ export async function GET(req: NextRequest, { params }: Params) {
         return NextResponse.json(
             {
                 success: true,
-                message: `Get detail blog with slug ${slug} successfull`,
+                message: `Get detail blog with slug ${slug} successful`,
                 data: findProductByQuery,
             },
             {
@@ -42,5 +43,15 @@ export async function GET(req: NextRequest, { params }: Params) {
 
     } catch (error) {
         console.log(error)
+        return NextResponse.json(
+            {
+                success: false,
+                message: "Internal server error",
+                data: null,
+            },
+            {
+                status: 500,
+            }
+        )
     }
 }
