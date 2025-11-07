@@ -1,21 +1,22 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 import useAuthStore from "@/stores/useAuthStore";
 import Image from "next/image";
+import { HiMenu, HiX } from "react-icons/hi";
+import useToggleMobile from "@/hooks/useToggleMobile";
 
 export default function Navbar() {
 
   const { user, logout } = useAuthStore();
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, toggle } = useToggleMobile();
 
   return (
     <header className="fixed top-0 left-0 w-full bg-indigo-950 text-white shadow-md z-50">
       <nav className="mx-auto flex justify-between items-center px-4 py-4 md:px-12">
         {/* Logo */}
-        <Link 
-        href={'/'}
-        className="relative w-20 h-12">
+        <Link
+          href={'/'}
+          className="relative w-20 h-12">
           <Image
             src={'/images/fitness-logo3.png'}
             fill
@@ -64,22 +65,15 @@ export default function Navbar() {
 
         {/* Hamburger Menu Button (Mobile) */}
         <button
-          className="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden flex items-center justify-center w-10 h-10 text-white focus:outline-none transition-transform duration-300"
+          onClick={toggle}
           aria-label="Toggle Menu"
         >
-          <span
-            className={`block h-0.5 bg-white transform transition duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""
-              }`}
-          ></span>
-          <span
-            className={`block h-0.5 bg-white transition duration-300 ${isOpen ? "opacity-0" : ""
-              }`}
-          ></span>
-          <span
-            className={`block h-0.5 bg-white transform transition duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
-          ></span>
+          {isOpen ? (
+            <HiX className="text-3xl transition-transform duration-300 rotate-90" />
+          ) : (
+            <HiMenu className="text-3xl transition-transform duration-300 rotate-0" />
+          )}
         </button>
       </nav>
 
@@ -89,16 +83,16 @@ export default function Navbar() {
           }`}
       >
         <ul className="flex flex-col items-center gap-5 font-semibold text-lg">
-          <li><Link href="/" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link href="/about" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>About</Link></li>
-          <li><Link href="/teams" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Teams</Link></li>
-          <li><Link href="/services" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Services</Link></li>
-          <li><Link href="/blog" className="hover:text-indigo-400 transition" onClick={() => setIsOpen(false)}>Blog</Link></li>
+          <li><Link href="/" className="hover:text-indigo-400 transition" onClick={toggle}>Home</Link></li>
+          <li><Link href="/about" className="hover:text-indigo-400 transition" onClick={toggle}>About</Link></li>
+          <li><Link href="/teams" className="hover:text-indigo-400 transition" onClick={toggle}>Teams</Link></li>
+          <li><Link href="/services" className="hover:text-indigo-400 transition" onClick={toggle}>Services</Link></li>
+          <li><Link href="/blog" className="hover:text-indigo-400 transition" onClick={toggle}>Blog</Link></li>
           <li>
             {!user?.objectId ? (
               <>
                 <Link
-                  onClick={() => setIsOpen(false)}
+                  onClick={toggle}
                   href="/auth/login"
                   className="bg-purple-700 hover:bg-purple-900 px-5 py-2 rounded-full font-bold text-md transition">
                   Login
