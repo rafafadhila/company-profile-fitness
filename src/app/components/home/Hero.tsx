@@ -2,9 +2,12 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+
 
 export default function Hero() {
 
+    const { scrollToSection } = useSmoothScroll()
     const VideoHero = dynamic(() => import("./VideoHero"), { ssr: false });
 
     return (
@@ -22,7 +25,7 @@ export default function Hero() {
                 <div className="w-full md:w-1/2 flex justify-center">
                     <div className="w-full sm:w-[400px] md:w-[450px] lg:w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[550px] overflow-hidden rounded-md shadow-xl">
                         <VideoHero
-                            
+
                         />
                     </div>
                 </div>
@@ -37,7 +40,9 @@ export default function Hero() {
                     </h2>
 
                     <div className="pt-3">
-                        <button className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 transition rounded-md font-semibold">
+                        <button
+                            onClick={() => scrollToSection('overview')}
+                            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 transition rounded-md font-semibold">
                             Get Started
                         </button>
                     </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Overview() {
 
   const stats = [
@@ -20,7 +22,7 @@ export default function Overview() {
   ];
 
   return (
-    <section id="overview" className="bg-white text-black py-24">
+    <section id="overview" className="bg-white text-black py-24 scroll-m-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -32,7 +34,8 @@ export default function Overview() {
             <p className=" text-lg text-gray-600 leading-relaxed">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus, dicta error quam nisi ea! Ducimus, obcaecati ad soluta nobis explicabo nostrum similique est. Suscipit repudiandae sit eius nihil corrupti!
             </p>
-            <a href="#" className="bg-indigo-600 px-4 py-3 text-white rounded-md font-bold shadow-md hover:bg-indigo-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-150">More About Us</a>
+            <Link 
+            href="/about" className="bg-indigo-600 px-4 py-3 text-white rounded-md font-bold shadow-md hover:bg-indigo-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-150">More About Us</Link>
           </div>
 
           {/* Right Side - Cards */}

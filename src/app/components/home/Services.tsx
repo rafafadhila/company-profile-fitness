@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Services() {
 
@@ -28,32 +29,32 @@ export default function Services() {
                         <p className="text-lg text-gray-600 leading-relaxed">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus, dicta error quam nisi ea! Ducimus, obcaecati ad soluta nobis explicabo nostrum similique est. Suscipit repudiandae sit eius nihil corrupti!
                         </p>
-                        
+
                     </div>
 
                     {/* Featured Services */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
-                        { services.map((item, index) => (
-                                <div
+                        {services.map((item, index) => (
+                            <div
                                 key={index}
                                 className="group bg-gray-50 rounded-md shadow-sm p-8 text-center md:text-left hover:scale-101 hover:shadow-2xl hover:bg-white transition-all duration-300 space-y-4">
-                                    <div className="w-full overflow-hidden rounded-md">
-                                        <Image 
+                                <div className="w-full overflow-hidden rounded-md">
+                                    <Image
                                         src={item.image}
                                         alt={item.title}
                                         width={500}
                                         height={500}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-all"
-                                        />
-                                    </div>
-                                    <span className="block text-3xl font-semibold text-indigo-600">{item.title}</span>
-                                    <h3 className="text-base font-semibold text-gray-700 mb-6">
-                                        {item.description}
-                                    </h3>
-                                    <a href="#" className="bg-indigo-600 px-4 py-3 text-white rounded-md font-bold shadow-md hover:bg-indigo-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-150">Learn More</a>
+                                    />
                                 </div>
-                            ))}
+                                <span className="block text-3xl font-semibold text-indigo-600">{item.title}</span>
+                                <h3 className="text-base font-semibold text-gray-700 mb-6">
+                                    {item.description}
+                                </h3>
+                                <Link href="/services" className="bg-indigo-600 px-4 py-3 text-white rounded-md font-bold shadow-md hover:bg-indigo-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-150">Learn More</Link>
+                            </div>
+                        ))}
                     </div>
 
                 </div>
